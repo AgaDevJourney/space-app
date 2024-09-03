@@ -1,0 +1,840 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: auto;
+  margin: 0;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+header{
+  width: 100%;
+  background-color: #ffff;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+  z-index: 999;
+}
+
+.logo {
+  text-decoration: none;
+  color: #2c2c2c;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.navbar .nav{
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.navbar li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 5000;
+  color: #2c2c2c;
+  padding: .5rem 1.5rem;
+  border-radius: 999px;
+  transition: all .2s ease-in-out;
+}
+
+.navbar li:hover a {
+  background-color: #606b71;
+  color: #ffff;
+}
+
+.content {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding: 2rem 2rem;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.beranda{
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.home-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #2c2c2c;
+}
+
+.home-description {
+  width: 40%;
+}
+
+.home-description .title {
+  font-size: 2.5rem;
+  margin-block: 1rem;
+}
+
+.home-description p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.bg-img {
+  max-width: 400px;
+  height: auto;
+}
+
+.home-cta{
+  margin-top: 30px;
+  display: flex;
+}
+
+.cta-primary{
+  display: inline-block;
+  background-color: #606b71;
+  font-weight: 6000;
+  color: #ffff;
+  border-radius: 100px;
+  padding: 12px 17px;
+  text-decoration: none;
+}
+
+.cta-primary:hover{
+  background-color: #2c2c2c;
+}
+
+.featured-title{
+  padding: 0 0 1rem 0;
+  font-size: 1.3rem;
+  line-height: 24px;
+  margin: 0 auto;
+}
+
+.moon-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.moon-fact{
+  width: 24%;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 30px 60px rgba(0, 26, 255, 0.1);
+  background-color: #606b71;
+}
+
+.moon-fact:hover{
+  background-color: #e3e6e8;
+  transition: all 0.3s ease-in;
+}
+
+.moon-detail{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.title-container{
+  margin-left: 13px;
+  max-width: 50%;
+}
+
+.moon-logo{
+  width: 50px;
+}
+
+.moon-title{
+  font-size: 1.1rem;
+  margin: 0 0 5px 0;
+  color: #ffff;
+}
+
+.moon-fact:hover .moon-title{
+  color: #2c2c2c;
+}
+
+.moon-p{
+  margin: 0;
+  font-size: 1rem;
+  color: #ffff;
+  line-height: 1.8;
+}
+
+.moon-fact:hover .moon-p{
+  color: #2c2c2c;
+}
+
+.fase-bulan{
+  color: #2c2c2c;
+}
+
+.title-fase{
+  font-size: 1.3rem;
+  margin-bottom: .2rem;
+}
+
+.fase-bulan p{
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.moon{
+  max-width: 250px;
+}
+
+.sub-phases{
+  display: flex;
+  padding: 10px 0;
+  gap: 1.5rem;
+}
+
+.fase-subtitle{
+  font-size: 1.1rem;
+  margin-bottom: .2rem;
+}
+
+.fase-description{
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.gallery{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.item-gallery{
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  text-align: center;
+  color: #2c2c2c;
+}
+
+.gallery-list{
+  width: 100%;
+  background-color: #606b71;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 13px;
+}
+
+.gallery-img{
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-title{
+  position: absolute;
+  font-size: 1rem;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(5,5,5,0), rgba(0,0,0,1));
+  top: 250px;
+  transition: all .5s ease-in;
+}
+
+.img-title p{
+  text-align: center;
+  color: #ffff;
+  line-height: 2px;
+  position: relative;
+  top: 125px;
+  text-shadow: 1px 1px rgba(5, 5, 5, .5);
+}
+
+.gallery-img:hover .img-title{
+  top: 0;
+  transition: all .5s ease-out;
+}
+
+.gallery-image{
+  max-width: 250px;
+}
+
+.gallery-img .gallery-image {
+  transform: scale(1);
+  transition: all .3s ease-out;
+}
+
+.gallery-img:hover .gallery-image{
+  transform: scale(1.1);
+  transition: all .3s ease-in;
+}
+
+.misi{
+  color: #2c2c2c;
+}
+
+.title-mission{
+  font-size: 1.3rem;
+}
+
+.misi-p{
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.misi-bulan{
+  display: flex;
+  padding: 10px 0;
+  gap: 1.5rem;
+}
+
+.misi-subtitle{
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.misi-detail{
+  line-height: 1.8;
+  font-size: 1em;
+  padding-bottom: 0.5rem;
+}
+
+.misi-image{
+  box-sizing: border-box;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.astronaut-title{
+  margin: 1rem;
+  font-size: 1.3rem;
+  line-height: 24px;
+  text-align: center;
+}
+
+.astronaut-list{
+  display: flex;
+  gap: 20px;
+}
+
+.astronaut-biographies{
+  width: calc(100% / 3);
+  padding: 20px;
+  border-radius: 35px;
+  text-align: center;
+  color: white;
+  background-color: #606b71;
+  transform: scale(1);
+}
+
+.astronaut-biographies:hover{
+  background-color: #e3e6e8;
+  transition: all .2s ease-in;
+  transform: scale(1.05);
+  color: #2c2c2c;
+}
+
+.astronaut-bio{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+}
+
+.astronaut-data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.astro-title{
+  margin: 10px 0 10px 0;
+  font-size: 1.1rem;
+}
+
+.astro-about{
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.bio-logo{
+  width: 130px;
+  clip-path: circle();
+}
+
+.biodata-card{
+  padding: 2rem 2rem;
+  color: #2c2c2c;
+}
+
+.biodata-title{
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  text-align: center; 
+}
+
+.biodata-list{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.biodata-content{
+  width: 30%;
+  padding: 20px;
+  border-radius: 35px;
+  text-align: center;
+  color: #ffff;
+  background-color: #606b71;
+  transform: scale(1);
+}
+
+.biodata-content:hover{
+  background-color: #e3e6e8;
+}
+
+.biodata-img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.8;
+}
+
+.biodata-image{
+  width: 130px;
+  clip-path: circle();
+}
+
+.bio-title{
+  font-size: 1.1rem;
+  color: #ffff;
+}
+
+.biodata-content:hover .bio-title{
+  color: #2c2c2c;
+}
+
+.bio-description{
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffff;
+}
+
+.biodata-content:hover .bio-description{
+  color: #2c2c2c;
+}
+
+.desc-p{
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #ffff;
+}
+
+.biodata-content:hover .desc-p{
+  color: #2c2c2c;
+}
+
+.contact{
+  color: #2c2c2c;
+  font-size: 1rem;
+  background-color: #ffff;
+  border-radius: 100px;
+  padding: 12px 15px;
+  text-decoration: none;
+}
+
+.contact:hover{
+  color: #ffff;
+  background-color: #606b71;
+}
+
+footer{
+  padding: 2rem;
+  font-size: 1rem;
+  color: #2c2c2c;
+  background-color: #e3e6e8;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 918px){
+.navbar-container{
+  flex-wrap: wrap;
+}
+  
+.home-description .title{
+  font-size: 2rem;
+}
+
+.home-description {
+      width: 50%;
+  }
+
+.bg-img {
+      max-width: 300px;
+      height: auto;
+  }
+
+.featured-title{
+  margin-bottom: 0;
+}
+
+.moon-list{
+  flex-wrap: wrap;
+}
+
+.moon-fact{
+  width: 49.2%;
+  align-self: normal;
+}
+
+.bulan{
+      margin-bottom: 0;
+  }
+
+.sub-phases{
+      flex-direction: column;
+      gap: 1rem;
+  }
+
+.moon{
+      max-width: 200px;
+  }
+
+.gallery{
+  margin-bottom: 0;
+}
+
+.gallery-list{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+.gallery-image{
+      width: 200px;
+  }
+
+.img-title{
+    top: 200px;
+  }
+
+.img-title p{
+    top: 100px;
+  }
+
+.misi{
+  margin-bottom: 0;
+}
+
+.misi-bulan{
+  flex-direction: column;
+}
+
+.misi-image{
+      max-width: 200px;
+  }
+
+.misi-detail{
+  font-size: 1rem;
+  padding-bottom: 0;
+}
+
+.astronaut-list{
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.astronaut-biographies{
+width: 100%;
+}
+
+.astro-logo{
+  width: 110px;
+}
+
+.biodata-content{
+  width: 100%;
+}
+
+.biodata-image{
+  width: 110px;
+}
+
+}
+
+@media screen and (max-width : 688px){
+
+body{
+  margin-top: 6rem;
+}
+
+.logo{
+  margin-bottom: .5rem;
+}
+
+.navbar-container{
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.nav{
+  align-items: center;
+  /* flex-direction: column; */
+  gap: 1rem;
+}
+
+.navbar li a{
+  padding: 0;
+  padding: .5rem;
+}
+
+.home-content{
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home-image{
+  order: -1;
+  }
+
+  .bg-img{
+    width: 250px;
+  }
+
+.home-description{
+  width: 100%;
+  }
+
+  .moon-fact{
+    width: 100%;
+  }
+
+.sub-phases {
+  gap: 0.5rem;
+}
+
+.moon-img{
+  order: 1;
+}
+
+.gallery-list{
+  width:100%;
+}
+
+.list-misi{
+  gap: 0.5rem;
+}
+
+.misi-img{
+  order: 1;
+}
+}
+
+
+@media screen and (max-width : 425px){
+
+body{
+  margin-top: 11rem;
+}
+
+.nav{
+    flex-direction: column;
+    gap: .6rem;
+  }
+
+.navbar li a{
+    font-size: .9rem;
+    padding: .3rem;
+  }
+
+.home-description .title{
+  font-size: 1.8rem;
+}
+
+.home-description p {
+    font-size: .9rem;
+}
+
+.cta-primary{
+    font-size: .9rem;
+    padding: 9px 17px;
+  }
+  
+
+.bg-img {
+    max-width: 200px;
+    height: auto;
+}
+
+.featured-title{
+      font-size: 1.1rem;
+}
+
+.moon-detail{
+      flex-direction: column;
+      align-items: center;
+}
+
+.moon-logo{
+  width: 50px;
+  margin: 0 0 5px 0;
+}
+
+.moon-title{
+  font-size: 1rem;
+}
+
+.moon-p{
+  font-size: .9rem;
+}
+
+.title-struktur{
+  font-size: 1.1rem;
+}
+
+.struktur-bulan p{
+  font-size: .9rem;
+}
+
+.struktur-description p{
+  font-size: .9rem;
+}
+
+.struktur-subtitle{
+  font-size: 1rem;
+}
+
+.struktur-description{
+  font-size: .9rem;
+}
+
+.title-fase{
+  font-size: 1.1rem;
+}
+
+.fase-bulan p{
+  font-size: .9rem;
+}
+
+.moon{
+  max-width: 180px;
+}
+
+.fase-subtitle{
+  font-size: 1rem;
+}
+
+.fase-description{
+  font-size: .9rem;
+}
+
+.item-gallery{
+  font-size: 1.1rem;
+}
+
+.gallery-list{
+  padding: .7rem;
+}
+
+.gallery-image{
+  width: 180px;
+}
+
+.img-title{
+  font-size: .9rem;
+}
+
+.img-title p{
+  top: 90px;
+}
+
+.title-mission{
+  font-size: 1.1rem;
+}
+
+.misi-p{
+  font-size: .9rem;
+}
+
+.misi-subtitle{
+  font-size: 1rem;
+}
+
+.misi-detail{
+  font-size: .9rem;
+}
+
+.card-image{
+  max-width: 180px;
+}
+
+.astronaut-title{
+  font-size: 1.1rem;
+}
+
+.astro-title{
+  font-size: 1rem;
+}
+
+.astro-about{
+  font-size: .9rem;
+}
+
+.bio-logo{
+  width: 80px;
+}
+
+.biodata-title{
+  font-size: 1.1rem;
+}
+
+.bio-title{
+  font-size: 1rem;
+}
+
+.biodata-image{
+  width: 80px;
+}
+
+.bio-description{
+  font-size: .9rem;
+}
+
+.desc-p{
+  font-size: .9rem;
+}
+
+.contact{
+  font-size: .9rem;
+  padding: 8px 8px;
+}
+
+footer{
+  font-size: .9rem;
+}
+
+}
